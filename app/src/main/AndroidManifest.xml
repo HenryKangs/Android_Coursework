@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gear7_000.android_coursework">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Coventry University Buildings"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CameraActivity">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.CameraActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.gear7_000.android_coursework.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"></meta-data>
+        </provider>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Coventry Student List"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.StudentActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BuildingDisplayInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Building Information"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.BuildingDisplayInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentAddActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Add Student Information"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.StudentAddActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentDisplayInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Student Information"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.StudentDisplayInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentUpdateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Update Student Information"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.StudentUpdateActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Coventry Student Login"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Coventry Student Register"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.example.gear7_000.android_coursework.RegisterActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

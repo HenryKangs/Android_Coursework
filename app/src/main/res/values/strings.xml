@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">My List</string>
+
+    <string-array name="buildingNames">
+        <item>Alan Berry</item>
+        <item>Alma</item>
+        <item>Armstrong Siddeley</item>
+        <item>Bugatti</item>
+        <item>Charles Ward</item>
+        <item>EC Building</item>
+        <item>Ellen Terry</item>
+        <item>Frederic L. Library</item>
+        <item>George Eliot</item>
+        <item>Graham Sutherland</item>
+        <item>The Hub</item>
+        <item>Jaguar</item>
+        <item>James Starley</item>
+        <item>Maurice Foss</item>
+        <item>Car Park</item>
+        <item>Priory Building</item>
+        <item>Richard Crossman</item>
+        <item>Sir John Laing</item>
+        <item>Sir William Lyons</item>
+        <item>Student Centre</item>
+        <item>Whitefriars</item>
+        <item>William Morris</item>
+        <item>Student Information</item>
+    </string-array>
+
+    <string-array name="buildingDetails">
+        <item>This was constructed in 1963.</item>
+        <item>This was built in the 1920’s.</item>
+        <item>The building was built in the 1970’s.</item>
+        <item>This building funded by the Bugatti trust was built in 2002.</item>
+        <item>The building was built in the 1950’s.</item>
+        <item>This building was completed in 2012.</item>
+        <item>This building was originally built in 1880.</item>
+        <item>This building was completed in 2001.</item>
+        <item>This building was built in 1960.</item>
+        <item>This building was completed in 1959.</item>
+        <item>The Hub was completed in 2011.</item>
+        <item>This building was built in the late 1970’s.</item>
+        <item>This building was built in the late 1950’s.</item>
+        <item>This building was completed in 1978.</item>
+        <item>This building was opened for staff and visitors in 2010.</item>
+        <item>This building was completed in 1964.</item>
+        <item>This building was built in 1971 .</item>
+        <item>This building was built in 1970.</item>
+        <item>This building was constructed in 1980.</item>
+        <item>Construction was completed in 2006.</item>
+        <item>This building was built in 1922.</item>
+        <item>This building began life in 1910 as a factory.</item>
+        <item>Enter student details here.</item>
+    </string-array>
+
+    <string name="return_button">Return</string>
+    <string name="add_button">Return</string>
+    <string name="save_button">Save</string>
+    <string name="title_activity_display">DisplayInfo</string>
+    <string name="title_activity_student">StudentInfo</string>
+    <string name="title_activity_building_display_info">BuildingDisplayInfo</string>
+    <string name="title_activity_student_display_info">StudentDisplayInfo</string>
+    <string name="title_activity_student_update">StudentUpdateActivity</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>
