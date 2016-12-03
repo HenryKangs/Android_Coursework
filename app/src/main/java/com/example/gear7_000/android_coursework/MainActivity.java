@@ -11,11 +11,13 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //listview, string arrays and string key are declared.
     private ListView listView;
     private String[] buildingNames;
     private String[] buildingDetails;
     public static final String INFO_ONE = "Building info";
 
+    //photos of coventry buildings, which exist in drawable folder, are recognized.
     public static int[] buildingPhotos = {
             R.drawable.alanberry,
             R.drawable.alma,
@@ -49,14 +51,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //buildingnames and details are initialized.
         buildingNames = getResources().getStringArray(R.array.buildingNames);
         buildingDetails = getResources().getStringArray(R.array.buildingDetails);
+        //each building object is generated and visualized in the listview.
         generateBuildings();
 
         listView = (ListView) findViewById(R.id.listViewComplexBuilding);
         listView.setAdapter(new BuildingAdapter(this, R.layout.list_building_item, buildings));
         listView.setOnItemClickListener(
 
+                //this checks the position of selected building object. Depending on the position of an item, a new screen that contains corresponding information appears.
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -138,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    //using for loop, it simply generates building objects and each of them are added into a list.
     private void generateBuildings() {
         for (int i = 0; i < buildingPhotos.length; i++) {
             buildings.add(new Building(buildingNames[i], buildingDetails[i], buildingPhotos[i]));

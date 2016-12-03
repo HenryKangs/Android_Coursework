@@ -12,7 +12,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:textStyle="bold"
-    tools:context="com.example.kangj10.mylist.StudentAddActivity">
+    tools:context="com.example.gear7_000.android_coursework.StudentAddActivity">
 
     <TableLayout
         android:layout_width="match_parent"

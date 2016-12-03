@@ -16,13 +16,6 @@
         android:label="Coventry University Buildings"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CameraActivity">
-            <intent-filter>
-                <action android:name="com.example.gear7_000.android_coursework.CameraActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

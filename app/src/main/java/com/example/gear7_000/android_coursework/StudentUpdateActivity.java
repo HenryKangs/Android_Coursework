@@ -19,6 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class StudentUpdateActivity extends AppCompatActivity {
+
+    //all the components that take user input are declared.
     private EditText idText;
     private EditText nameTextFirst;
     private EditText nameTextLast;
@@ -34,6 +36,8 @@ public class StudentUpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_update);
+
+        //aforementioned components are initialized.
         idText = (EditText) findViewById(R.id.idText);
         nameTextFirst = (EditText) findViewById(R.id.nameTextFirst);
         nameTextLast = (EditText) findViewById(R.id.nameTextLast);
@@ -42,6 +46,7 @@ public class StudentUpdateActivity extends AppCompatActivity {
         phoneText = (EditText) findViewById(R.id.phoneText);
         mImageView = (ImageView) findViewById(R.id.image);
 
+        //each components are assigned with corresponding texts which are passed via intent method.
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         idText.setText(intent.getStringExtra(StudentDisplayInfo.DATA_ONE));
@@ -56,6 +61,7 @@ public class StudentUpdateActivity extends AppCompatActivity {
 
     public void onUpdateClick(View v) {
         try {
+            //gets all the required user inputs from the corresponding components.
             int id = Integer.parseInt(idText.getText().toString());
             String first_name = nameTextFirst.getText().toString();
             String last_name = nameTextLast.getText().toString();
@@ -63,6 +69,7 @@ public class StudentUpdateActivity extends AppCompatActivity {
             String email = emailText.getText().toString();
             String phone = phoneText.getText().toString();
             DatabaseHandler db = new DatabaseHandler(this);
+            //a function that updates student object is called.
             db.updateStudentInfo(new Student(id, first_name, last_name, address, email, phone, imagepaths));
             finish();
         } catch (NumberFormatException ex) {

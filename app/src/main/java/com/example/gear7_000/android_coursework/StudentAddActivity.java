@@ -33,6 +33,8 @@ public class StudentAddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_add);
+
+        //variables needed to create student object are declared.
         mImageView = (ImageView) findViewById(R.id.image);
         idText = (EditText) findViewById(R.id.idText);
         nameTextFirst = (EditText) findViewById(R.id.nameTextFirst);
@@ -44,6 +46,7 @@ public class StudentAddActivity extends AppCompatActivity {
 
     public void onAddClick(View v) {
         try {
+            //variables are initialized with user input value.
             int id = Integer.parseInt(idText.getText().toString());
             String first_name = nameTextFirst.getText().toString();
             String last_name = nameTextLast.getText().toString();
@@ -51,8 +54,10 @@ public class StudentAddActivity extends AppCompatActivity {
             String email = emailText.getText().toString();
             String phone = phoneText.getText().toString();
             String imagepaths = mCurrentPhotoPath;
+            //if the user took a photo when creating a student object.
             if (imagepaths != null) {
                 DatabaseHandler db = new DatabaseHandler(this);
+                //all the user input values required to create a student object are sent as parameters.
                 if (db.addStudentInfo(new Student(id, first_name, last_name, address, email, phone, imagepaths))) {
                     Toast.makeText(getApplicationContext(), "Student successfully inserted.", Toast.LENGTH_LONG).show();
                     finish();
@@ -71,18 +76,19 @@ public class StudentAddActivity extends AppCompatActivity {
         finish();
     }
 
+    //if a camera button is clicked, user screen switches to camera application where the user can capture an image.
     public void onCameraClick(View v) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
+        // ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
+            // create the File where the photo should go
             File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
-                // Error occurred while creating the File
+                // error occurred while creating the File
             }
-            // Continue only if the File was successfully created
+            // continue only if the File was successfully created
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
                         "com.example.gear7_000.android_coursework.fileprovider",
@@ -93,6 +99,8 @@ public class StudentAddActivity extends AppCompatActivity {
         }
     }
 
+    //after capturing an image, it asks the user if he/she would like to proceed by allowing a tick-symbol button to be clicked.
+    //if the user clicks on the tick-symbol button, the captured image is then applied to the imageView component.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
