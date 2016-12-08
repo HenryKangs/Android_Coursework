@@ -1,5 +1,7 @@
 package com.example.gear7_000.android_coursework;
 
+import android.content.Context;
+
 /**
  * Created by gear7_000 on 11/8/2016.
  */
@@ -13,8 +15,20 @@ public class Student {
     private String email;
     private String phone;
     private String imagepaths;
+    private Context context;
 
     public Student(int id, String first_name, String last_name, String address, String email, String phone, String imagepaths) {
+        //aforementioned variables are initialized.
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+        this.imagepaths = imagepaths;
+    }
+
+    public Student(int id, String first_name, String last_name, String address, String email, String phone, String imagepaths, Context context) {
         //aforementioned variables are initialized.
         this.id = id;
         this.first_name = first_name;

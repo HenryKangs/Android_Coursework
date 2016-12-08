@@ -1,5 +1,7 @@
 package com.example.gear7_000.android_coursework;
 
+import android.content.Context;
+
 /**
  * Created by kangj10 on 31/10/2016.
  */
@@ -9,9 +11,17 @@ public class Building {
     private String name;
     private String detail;
     private int photo;
+    private Context context;
+
 
     //constructor receives three parameters building name, building detail and building photo to create a building object.
     public Building(String name, String detail, int photo) {
+        this.name = name;
+        this.detail = detail;
+        this.photo = photo;
+    }
+
+    public Building(String name, String detail, int photo, Context context) {
         this.name = name;
         this.detail = detail;
         this.photo = photo;
