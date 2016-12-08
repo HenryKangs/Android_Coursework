@@ -12,9 +12,9 @@
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="left"
+        android:paddingLeft="10dp"
         android:keepScreenOn="true"
-        android:text="DUMMY CONTENT"
         android:textColor="#33b5e5"
         android:textSize="20sp"
         android:textStyle="bold" />

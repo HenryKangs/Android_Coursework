@@ -12,7 +12,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1"
+        android:stretchColumns="0"
         android:weightSum="1">
 
         <TableRow
@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/usernameText"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword" />
@@ -57,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/passwordText"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Confirm Password"
                 android:inputType="textPassword" />
@@ -69,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="10dp"
             android:onClick="onCreateClick"
             android:text="Create" />
 
@@ -79,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/create_button"
             android:layout_alignBottom="@+id/create_button"
-            android:layout_toEndOf="@+id/create_button"
+            android:layout_marginTop="10dp"
             android:onClick="onReturnClick"
             android:text="Return" />
     </TableLayout>

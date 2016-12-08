@@ -132,7 +132,7 @@ public class StudentDisplayInfo extends AppCompatActivity {
         StringBuilder messageFromActivity1 = new StringBuilder();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        messageFromActivity1.append("Student ID: " + intent.getStringExtra(StudentActivity.INFO_ONE) + System.getProperty("line.separator"));
+        messageFromActivity1.append("Student Information:\n\nStudent ID: " + intent.getStringExtra(StudentActivity.INFO_ONE) + System.getProperty("line.separator"));
         messageFromActivity1.append("First Name: " + intent.getStringExtra(StudentActivity.INFO_TWO) + System.getProperty("line.separator"));
         messageFromActivity1.append("Last Name: " + intent.getStringExtra(StudentActivity.INFO_THREE) + System.getProperty("line.separator"));
         messageFromActivity1.append("Address: " + intent.getStringExtra(StudentActivity.INFO_FOUR) + System.getProperty("line.separator"));

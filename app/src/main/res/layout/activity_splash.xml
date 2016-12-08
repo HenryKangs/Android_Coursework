@@ -11,15 +11,15 @@
 
     <ImageView android:id="@+id/splashscreen" android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:src="@drawable/alma"
+        android:src="@drawable/cu"
         android:layout_gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true" />
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Welcome!"
-        android:layout_alignStart="@+id/splashscreen"
-        android:layout_marginStart="63dp" />
+        android:layout_marginStart="149dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
